@@ -1,0 +1,30 @@
+code to extract youtube videos 
+
+
+
+// 1. Saare links dhundho
+var allLinks = document.getElementsByTagName('a');
+var urlsOnly = [];
+
+for (var i = 0; i < allLinks.length; i++) {
+    var href = allLinks[i].href;
+    // 2. Sirf wahi links lo jo video ke hain
+    if (href && href.includes('/watch?v=')) {
+        urlsOnly.push(href);
+    }
+}
+
+// 3. Duplicate hatao
+var uniqueUrls = [...new Set(urlsOnly)];
+
+// 4. Sirf links ki list banao
+var finalResult = uniqueUrls.join('\n');
+
+console.log(finalResult);
+copy(finalResult);
+console.log("--- SUCCESS! Sirf " + uniqueUrls.length + " links copy hue hain. Ab paste karke dekho! ---");
+
+
+
+
+

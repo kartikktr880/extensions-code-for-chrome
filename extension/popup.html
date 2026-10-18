@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Video Extractor</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo-box">
+        <span class="icon">▶</span>
+      </div>
+      <div class="title-box">
+        <h1>YouTube Extractor</h1>
+        <p class="subtitle">Extract video links with 1 click</p>
+      </div>
+    </header>
+
+    <div class="action-section">
+      <button id="extractBtn" class="btn btn-primary">
+        <span class="btn-icon">⚡</span> Extract Links Now
+      </button>
+    </div>
+
+    <div id="statsSection" class="stats-section hidden">
+      <div class="badge">
+        <span id="videoCount">0</span> unique videos found
+      </div>
+    </div>
+
+    <div class="results-section">
+      <textarea id="resultsArea" placeholder="Extracted links will appear here..." readonly></textarea>
+    </div>
+
+    <div class="btn-group">
+      <button id="copyBtn" class="btn btn-secondary" disabled>
+        <span class="btn-icon">📋</span> Copy All
+      </button>
+      <button id="downloadBtn" class="btn btn-secondary" disabled>
+        <span class="btn-icon">💾</span> Download TXT
+      </button>
+    </div>
+
+    <div id="statusToast" class="toast hidden"></div>
+
+    <footer class="footer">
+      <span>Extensions Code for Chrome • by kartikktr880</span>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
